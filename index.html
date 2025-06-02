@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لعبة الأسئلة</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <script src="functions.js"></script>
+  <div id="player-form">
+    <label>أدخل أسماء اللاعبين مفصولة بفاصلة: </label>
+    <input id="player-input" type="text" placeholder="مثال: Ali,Fatma,Kareem">
+    <button onclick="startGame()">ابدأ اللعبة</button>
+  </div>
+
+  <div id="winner-screen">
+    <div id="winner-name"></div>
+    <button onclick="restartGame()">إعادة بدء اللعبة</button>
+  </div>
+
+  <div class="top-section" id="game-section">
+    <div class="question-section">
+      <div id="question" class="question"></div>
+      <div class="answers" id="answers"></div>
+      <div class="nav-buttons">
+        <button onclick="prevQuestion()">السابق</button>
+        <button onclick="randomQuestion()">سؤال عشوائي</button>
+      </div>
+    </div>
+    <div class="score-section">
+      <h2>المتسابقون</h2>
+      <div id="players"></div>
+    </div>
+  </div>
+
+
+</body>
+</html>
