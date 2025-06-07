@@ -52,11 +52,11 @@ function renderQuestion() {
     q.options.forEach((opt, index) => {
         const label = document.createElement("label");
         // Only show the correct answer hint for debugging/development, remove for actual game
-        // if (index === q.correct) {
-        //     label.innerHTML = `${opt} <span class="correct">✔ الإجابة الصحيحة</span>`;
-        // } else {
+        if (index === q.correct) { // Uncomment this line
+            label.innerHTML = `${opt} <span class="correct">✔ الإجابة الصحيحة</span>`; // Uncomment this line
+        } else { // Uncomment this line
             label.textContent = opt;
-        // }
+        } // Uncomment this line
         answersContainer.appendChild(label);
     });
 }
